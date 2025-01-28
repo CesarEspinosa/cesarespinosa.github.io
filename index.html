@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Andrea y Andrés</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-
         .Parisienne-regular {
-        font-family: "Parisienne", serif;
-        font-weight: 400;
-        font-style: normal;
+            font-family: "Parisienne", serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         body {
@@ -88,13 +87,16 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .bank-details h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #555;
             margin: 0
         }
         .bank-details p {
-            font-size: 1em;
+            font-size: 0.9em;
             margin: 5px 0;
+        }
+        .bank-details i {
+            margin-left: 4px;
         }
         .divider {
             border-top: 2px solid #BE9C6E;
@@ -129,6 +131,15 @@
             margin: 0;
         }
     </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copiado al portapapeles');
+            }, function(err) {
+                console.error('Error al copiar al portapapeles: ', err);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="main-header">
@@ -144,8 +155,8 @@
         <div class="bank-details">
             <h2>Datos Bancarios</h2>
             <p>Banco: <strong>BBVA</strong></p>
-            <p>Cuenta: <strong>275 016 3635</strong></p>
-            <p>CLABE: <strong>012 680 02750163635 1</strong></p>
+            <p>Cuenta: <strong>2750163635</strong><i onclick="copyToClipboard('2750163635')" class="fa-regular fa-copy"></i></p>
+            <p>CLABE: <strong>012680027501636351</strong><i onclick="copyToClipboard('012680027501636351')" class="fa-regular fa-copy"></i></p>
             <p>Beneficiario: <strong>Andrea Silva Ferro</strong></p>
         </div>
         <div class="divider"></div>
